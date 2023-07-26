@@ -11,6 +11,7 @@ Route::get($_ENV['SampleRoute'].'/contact/delete/{id}','ContactController@delete
 
 
 
+
  
 
 

@@ -18,6 +18,9 @@ class ContactController{
     public function add()
     {
         global $request;
+        // // var_dump($request);
+        // $a = $request->input('name');
+        // var_dump($a);
         $data['alreadyExists'] = false;
         $count = $this->contacModel->count(['mobile'=>$request->input('mobile')]);
         if ($count) {
@@ -43,6 +46,7 @@ class ContactController{
     public function delete()
     {
         global $request;
+        // var_dump($request);
         $id = $request->get_route_param('id');
         
         $data['deleted_count'] = $this->contacModel->delete(['id' => $id]);
